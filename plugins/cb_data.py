@@ -19,13 +19,13 @@ async def callback_query_handler(client, query: CallbackQuery):
             txt.ABOUT_TXT, 
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton('⚡ Help', callback_data='help')],[
-                    InlineKeyboardButton('🤖 Source Code', url="https://github.com/Dypixx/Instaloader"),
+                    InlineKeyboardButton('🤖 Updates', url="https://telegram.me/MRADBOT_OFFICIALS"),
                     InlineKeyboardButton('⬅️ Back', callback_data='back')]]))
     elif query.data == "back":
         await query.message.edit_text(
             txt.START_TXT.format(query.from_user.mention),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("🎭 Updates 🎭", url="https://telegram.me/DypixxTech")],
+                [InlineKeyboardButton("🎭 Updates 🎭", url="https://telegram.me/MRADBOT_OFFICIALS")],
                 [InlineKeyboardButton("⚡ Help", callback_data="help"), InlineKeyboardButton("📚 About", callback_data="about")],
                 [InlineKeyboardButton("🧑‍💻 Developer", user_id=int(ADMIN))]]))
     elif query.data == "close":
